@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Hide Images Bookmarklet</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+
+    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+    <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150">
+
+
+    <a href="
+        javascript:(function(){
+          var images = document.getElementsByTagName('img');
+
+          while(images.length > 0) {
+            images[0].parentNode.removeChild(images[0]);
+          }
+        })();
+      ">Hide Images</a>
+
+
+  </body>
+</html>
