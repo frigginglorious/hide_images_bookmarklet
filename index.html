@@ -17,16 +17,18 @@
         javascript:(function(){
           var images = document.getElementsByTagName('img');
 
+          while(images.length > 0){
+              images[0].parentNode.removeChild(images[0]);
+          }
           while(images.length > 0) {
             theParent = images[0].parentNode;
             oldImg = images[0];
-            var imgTag = document.createElement('img');
+            imgTag = document.createElement('img');
             imgTag.setAttribute('width', oldImg.getAttribute('width'));
             imgTag.setAttribute('height', oldImg.getAttribute('height'));
             imgTag.setAttribute('src', 'https://www.petfinder.com/wp-content/uploads/2012/11/140272627-grooming-needs-senior-cat-632x475.jpg');
-            
-            images[0].parentNode.removeChild(images[0]);
             theParent.appendChild(imgTag);
+
           }
         })();
       ">Hide Images</a>
